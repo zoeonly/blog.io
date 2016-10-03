@@ -45,10 +45,10 @@ f">
     
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
-    <link rel="stylesheet" href="/css/uno.css" type="text/css">
-    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
-    <link rel="stylesheet" href="/css/archive.css" type="text/css">
-    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
 <body>
@@ -247,29 +247,29 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h3 id="u5B89_u88C5_u8FC7_u7A0B"><a href="#u5B89_u88C5_u8FC7_u7A0B" class="headerlink" title="安装过程"></a>安装过程</h3><p>Macbook pro集显，CPU only，10.10.5<br>主要记录下遇到的问题<br><a href="http://blog.csdn.net/yjn03151111/article/details/46353013" target="_blank" rel="external">主要教程</a><br>教程中掉了一点是底下评论提到的：<br>CMakeLists.txt这个文件里面也有一个关于CPU_ONLY的地方要修改，改成on就可以了<br>照着教程走遇到的2个问题：</p>
+    <h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><p>Macbook pro集显，CPU only，10.10.5<br>主要记录下遇到的问题<br><a href="http://blog.csdn.net/yjn03151111/article/details/46353013" target="_blank" rel="external">主要教程</a><br>教程中掉了一点是底下评论提到的：<br>CMakeLists.txt这个文件里面也有一个关于CPU_ONLY的地方要修改，改成on就可以了<br>照着教程走遇到的2个问题：</p>
 <ol>
 <li><p>有一个cmake： command not find的问题。<br>解决办法：<br>参考下面视频手动装了cmake 并自己配置了下开启命令行<br><a href="https://www.youtube.com/watch?v=sK4sVg4SRsg" target="_blank" rel="external">装cmake</a></p>
 </li>
 <li><p>fatal error: ‘cblas.h’ file not found<br>解决办法：<br>根据下面网址自己切到目录下看了下并配置了下路径(比如我的目录就是0.2.15)<br><a href="https://github.com/BVLC/caffe/issues/617" target="_blank" rel="external">配置makefile.config</a><br>即：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">BLAS_INCLUDE :</span>= <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>openblas<span class="regexp">/0.2.15/</span>include</span><br><span class="line"><span class="string">BLAS_LIB :</span>= <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>openblas<span class="regexp">/0.2.15/</span>lib</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">BLAS_INCLUDE :</span>= <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>openblas<span class="regexp">/0.2.15/</span>include</div><div class="line"><span class="string">BLAS_LIB :</span>= <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>openblas<span class="regexp">/0.2.15/</span>lib</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>发现还是不行，接着看，说是需預先安裝Xcode及「Command Line Tools］<br>xcode就不想用说了，app store下<br>命令行输入<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ xcode－<span class="operator"><span class="keyword">select</span> —<span class="keyword">install</span> //<span class="keyword">install</span> Command Line Tools;</span></span><br></pre></td></tr></table></figure></p>
-<p>发现还是有问题，接着看到了这个<br><a href="http://stackoverflow.com/questions/35544356/install-caffe-on-mac-error-fatal-error-cblas-h-file-not-found" target="_blank" rel="external">最终解决办法</a><br>即：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew <span class="operator"><span class="keyword">uninstall</span> openblas;</span> brew <span class="operator"><span class="keyword">install</span> <span class="comment">--fresh -vd openblas</span></span><br><span class="line">cmake -DCMAKE_CXX_FLAGS=-<span class="keyword">I</span>/usr/<span class="keyword">local</span>/opt/openblas/<span class="keyword">include</span></span></span><br></pre></td></tr></table></figure></p>
+<p>发现还是不行，接着看，说是需預先安裝Xcode及「Command Line Tools］<br>xcode就不想用说了，app store下<br>命令行输入<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ xcode－<span class="keyword">select</span> —<span class="keyword">install</span> //<span class="keyword">install</span> Command Line Tools;</div></pre></td></tr></table></figure></p>
+<p>发现还是有问题，接着看到了这个<br><a href="http://stackoverflow.com/questions/35544356/install-caffe-on-mac-error-fatal-error-cblas-h-file-not-found" target="_blank" rel="external">最终解决办法</a><br>即：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">brew <span class="keyword">uninstall</span> openblas; brew <span class="keyword">install</span> <span class="comment">--fresh -vd openblas</span></div><div class="line">cmake -DCMAKE_CXX_FLAGS=-I/usr/<span class="keyword">local</span>/opt/openblas/<span class="keyword">include</span></div></pre></td></tr></table></figure></p>
 <p>完美解决</p>
 <hr>
-<h3 id="u8BAD_u7EC3_u7B2C_u4E00_u4E2A_u6570_u636E_u96C6"><a href="#u8BAD_u7EC3_u7B2C_u4E00_u4E2A_u6570_u636E_u96C6" class="headerlink" title="训练第一个数据集"></a>训练第一个数据集</h3><p><a href="http://www.lupaworld.com/article-250356-1.html" target="_blank" rel="external">这是教程</a></p>
+<h3 id="训练第一个数据集"><a href="#训练第一个数据集" class="headerlink" title="训练第一个数据集"></a>训练第一个数据集</h3><p><a href="http://www.lupaworld.com/article-250356-1.html" target="_blank" rel="external">这是教程</a></p>
 <ol>
 <li><p>训练第一个数据集的时候发现wget: command not found<br><a href="http://mikebeach.org/2012/09/29/how-to-install-wget-in-mac-os-x/" target="_blank" rel="external">安装wget</a></p>
 </li>
 <li><p>运行时发现:cannot use gpu in cpu-only<br><a href="https://github.com/BVLC/caffe/issues/1799" target="_blank" rel="external">改下文件配置</a><br>即在makefile.config中将</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">solver_mode</span>: <span class="string">GPU</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">solver_mode:</span> GPU</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>改成<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">solver_mode</span>: <span class="string">GPU</span></span><br></pre></td></tr></table></figure></p>
+<p>改成<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">solver_mode:</span> GPU</div></pre></td></tr></table></figure></p>
 <ol>
-<li>生成数据文件lmdb有问题，呵呵了，发现了大问题，<strong>build文件夹是个空的</strong>，正常文件夹貌似应该有很多东西<br>翻遍了各种论坛没有找到解决办法，最后本人强行将examples和tools等5个文件夹复制到了build中，就不报错了，可以训练一下数据.（有一点需要注意的是执行sh文件的时候最好从根目录执行，不然也会出错）<br><a href="https://groups.google.com/forum/#!searchin/caffe-users/caffe$20build$20folder$20/caffe-users/-7_0xR3jLxA/SdQ6V_EB8zUJ" target="_blank" rel="external">也是build文件夹有问题，但是没有解决办法</a><br>测试数据：<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">build<span class="regexp">/tools/</span>caff test -model=examples<span class="regexp">/mnist/</span>lenet_train_test.prototxt -weights=examples<span class="regexp">/mnist/</span>lenet_iter_10000.caffemodel</span><br></pre></td></tr></table></figure>
+<li>生成数据文件lmdb有问题，呵呵了，发现了大问题，<strong>build文件夹是个空的</strong>，正常文件夹貌似应该有很多东西<br>翻遍了各种论坛没有找到解决办法，最后本人强行将examples和tools等5个文件夹复制到了build中，就不报错了，可以训练一下数据.（有一点需要注意的是执行sh文件的时候最好从根目录执行，不然也会出错）<br><a href="https://groups.google.com/forum/#!searchin/caffe-users/caffe$20build$20folder$20/caffe-users/-7_0xR3jLxA/SdQ6V_EB8zUJ" target="_blank" rel="external">也是build文件夹有问题，但是没有解决办法</a><br>测试数据：<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">build<span class="regexp">/tools/</span>caff test -model=examples<span class="regexp">/mnist/</span>lenet_train_test.prototxt -weights=examples<span class="regexp">/mnist/</span>lenet_iter_10000.caffemodel</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>最后发现这个<a href="https://groups.google.com/forum/#!searchin/caffe-users/caffe$20build$20folder$20/caffe-users/-7_0xR3jLxA/SdQ6V_EB8zUJ" target="_blank" rel="external">教程</a>也不错</p>

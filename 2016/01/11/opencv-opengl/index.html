@@ -33,10 +33,10 @@
     
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
-    <link rel="stylesheet" href="/css/uno.css" type="text/css">
-    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
-    <link rel="stylesheet" href="/css/archive.css" type="text/css">
-    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
 <body>
@@ -236,7 +236,7 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <p>这段时间准备开始毕设了，题目是研究生的导师给的，应该跟未来三年的研究方向有关，所以态度还是要有的，先搜集资料试了下水，跟我想象的有点不同，但是也蛮有意思的，还比较感兴趣，是基于深度学习的车型分类，题目不新，希望会有前辈的资料，在了解的过程中看到opencv这个东西，联想到OpenGL和前段时间看到的webgl,所以想记录下自己了解到的。<a id="more"></a><br>首先理解几个概念：</p>
-<h2 id="CG_uFF0CCV_uFF0CDIP_uFF0CAR"><a href="#CG_uFF0CCV_uFF0CDIP_uFF0CAR" class="headerlink" title="CG，CV，DIP，AR"></a>CG，CV，DIP，AR</h2><p>CG(Computer Graphics): 图形又称矢量图，是指由外部轮廓线条构成的矢量图。既有计算机绘制的直线、圆、矩形、曲线、图表等。<br>CV(Computer Vision):计算机视觉是使用计算机及相关设备对生物视觉的一种模拟。它的主要任务就是通过对采集的图片或视频进行处理以获得相应场景的三维信息，就像人类和许多其他类生物每天所做的那样。<br>DIP(Digital Image Processing):图像又称位图，是由扫描仪、摄像机等输入设备捕捉实际的画面产生的数字图像，是由像素点阵构成的位图。<br>AR(Augmented Reality):增强现实技术包含了多媒体、三维建模、实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技术与新手段。增强现实提供了在一般情况下，不同于人类可以感知的信息。<br>主要注意的是图形和图像的区别,即矢量图和位图的区别，另外两个是一个研究方向，涵盖了CG,DIP,比如计算机视觉就涵盖了DIP，主要涉及图像输入和识别处理的问题,AR则需要应用CG来建立模型，属于输出的范畴。</p>
+<h2 id="CG，CV，DIP，AR"><a href="#CG，CV，DIP，AR" class="headerlink" title="CG，CV，DIP，AR"></a>CG，CV，DIP，AR</h2><p>CG(Computer Graphics): 图形又称矢量图，是指由外部轮廓线条构成的矢量图。既有计算机绘制的直线、圆、矩形、曲线、图表等。<br>CV(Computer Vision):计算机视觉是使用计算机及相关设备对生物视觉的一种模拟。它的主要任务就是通过对采集的图片或视频进行处理以获得相应场景的三维信息，就像人类和许多其他类生物每天所做的那样。<br>DIP(Digital Image Processing):图像又称位图，是由扫描仪、摄像机等输入设备捕捉实际的画面产生的数字图像，是由像素点阵构成的位图。<br>AR(Augmented Reality):增强现实技术包含了多媒体、三维建模、实时视频显示及控制、多传感器融合、实时跟踪及注册、场景融合等新技术与新手段。增强现实提供了在一般情况下，不同于人类可以感知的信息。<br>主要注意的是图形和图像的区别,即矢量图和位图的区别，另外两个是一个研究方向，涵盖了CG,DIP,比如计算机视觉就涵盖了DIP，主要涉及图像输入和识别处理的问题,AR则需要应用CG来建立模型，属于输出的范畴。</p>
 <h2 id="OpenGL"><a href="#OpenGL" class="headerlink" title="OpenGL"></a>OpenGL</h2><p>Open Graphics Library<br>OpenGL是一个开放的三维<strong>图形</strong>软件包，它独立于窗口系统和操作系统，以它为基础开发的应用程序可以十分方便地在各种平台间移植,像最近看到3d 的WebGl,就可以把JavaScript和OpenGL ES 2.0结合在一起，通过增加OpenGL ES 2.0的一个JavaScript绑定，WebGL可以为HTML5 Canvas提供硬件3D加速渲染，这样Web开发人员就可以借助系统显卡来在浏览器里更流畅地展示3D场景和模型了，还能创建复杂的导航和数据视觉化。<br>应用：游戏，3d绘图</p>
 <h2 id="OpenCv"><a href="#OpenCv" class="headerlink" title="OpenCv"></a>OpenCv</h2><p>Open Source Computer Vision Library<br>OpenCV是一个基于（开源）发行的跨平台计算机视觉库，可以运行在Linux、Windows和Mac OS操作系统上。它轻量级而且高效——由一系列 C 函数和少量 C++ 类构成，同时提供了Python、Ruby、MATLAB等语言的接口，实现了<strong>图像处理</strong>和<strong>计算机视觉</strong>方面的很多通用算法.<br>应用：视频的降噪、运动物体的跟踪、目标（比如人脸）的识别，机器视觉，物体或动作识别。</p>
 

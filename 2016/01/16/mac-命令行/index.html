@@ -33,10 +33,10 @@
     
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
-    <link rel="stylesheet" href="/css/uno.css" type="text/css">
-    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
-    <link rel="stylesheet" href="/css/archive.css" type="text/css">
-    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
 <body>
@@ -235,10 +235,10 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h2 id="u57FA_u672C_u547D_u4EE4"><a href="#u57FA_u672C_u547D_u4EE4" class="headerlink" title="基本命令"></a>基本命令</h2><p><strong> 列出文件 </strong><br>ls 参数 目录名<br>例: 想看看跟目录下有什么，<br>ls /<br>想看看驱动目录下有什么，<br>ls /Library/Extensions<br>参数 -w 显示中文，-l 详细信息， -a 包括隐藏文件<br><strong> 转换目录 </strong><br>cd<br>例：想到驱动目录下溜达一圈<br>cd /System/Library/Extensions<br><strong> 建立新目录 </strong><br>mkdir 目录名<br>例：在驱动目录下建一个备份目录 backup<br>mkdir /System/Library/Extensions/backup<br>在桌面上建一个备份目录 backup<br>mkdir /User/用户名/Desktop/backup<br><strong> 拷贝文件 </strong><br>cp 参数 源文件 目标文件<br>例：想把桌面的Natit.kext 拷贝到驱动目录中<br>cp -R /User/用户名/Desktop/Natit.kext /System/Library/Extensions<br>参数R表示对目录进行递归操作，kext在图形界面下看起来是个文件，实际上是个文件夹。<br>把驱动目录下的所有文件备份到桌面backup<br>cp -R /System/Library/Extensions/<em> /User/用户名/Desktop/backup<br><em>* 删除文件 </em></em><br>rm 参数 文件<br>例：想删除驱动的缓存<br>rm -rf /System/Library/Extensions.kextcache<br>rm -rf /System/Library/Extensions.mkext<br>参数－rf 表示递归和强制，千万要小心使用，如果执行了 rm -rf / 你的系统就全没了</p>
+    <h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p><strong> 列出文件 </strong><br>ls 参数 目录名<br>例: 想看看跟目录下有什么，<br>ls /<br>想看看驱动目录下有什么，<br>ls /Library/Extensions<br>参数 -w 显示中文，-l 详细信息， -a 包括隐藏文件<br><strong> 转换目录 </strong><br>cd<br>例：想到驱动目录下溜达一圈<br>cd /System/Library/Extensions<br><strong> 建立新目录 </strong><br>mkdir 目录名<br>例：在驱动目录下建一个备份目录 backup<br>mkdir /System/Library/Extensions/backup<br>在桌面上建一个备份目录 backup<br>mkdir /User/用户名/Desktop/backup<br><strong> 拷贝文件 </strong><br>cp 参数 源文件 目标文件<br>例：想把桌面的Natit.kext 拷贝到驱动目录中<br>cp -R /User/用户名/Desktop/Natit.kext /System/Library/Extensions<br>参数R表示对目录进行递归操作，kext在图形界面下看起来是个文件，实际上是个文件夹。<br>把驱动目录下的所有文件备份到桌面backup<br>cp -R /System/Library/Extensions/<em> /User/用户名/Desktop/backup<br><em>* 删除文件 </em></em><br>rm 参数 文件<br>例：想删除驱动的缓存<br>rm -rf /System/Library/Extensions.kextcache<br>rm -rf /System/Library/Extensions.mkext<br>参数－rf 表示递归和强制，千万要小心使用，如果执行了 rm -rf / 你的系统就全没了</p>
 <p><strong> 移动文件 </strong><br>mv 文件<br>例：想把AppleHDA.Kext 移到桌面<br>mv /System/Library/Extensions/AppleHDA.kext /User/用户名/Desktop<br>想把AppleHDA.Kext 移到备份目录中<br>mv /System/Library/Extensions/AppleHDA.kext /System/Library/Extensions/backup<br><strong> 更改文件权限 </strong><br>chmod 参数 权限 文件<br>例：把驱动目录下所有文件设定到root读写，其他用户只读<br>chmod -R 755 /System/Library/Extensions<br>参数R 表示递归，755表示各用户的权限<br><strong> 更改文件属主 </strong><br>chown 参数 用户:组 文件<br>例：把驱动目录下的所有文件属主改成根用户<br>chown -R root:wheel /System/Library/Extensions<br>参数R 表示递归操作<br><strong> 修复整个系统中文件的权限 </strong><br>diskutil repairpermissions /<br>严格的说这不是一个unix 命令，而是osx一个软件，记得修改或添加的驱动就执行一次。<br><strong> 文本编辑 </strong><br>nano 文件名<br>例：编辑natit Info.plist<br>nano /System/Library/Extensions/Natit.kext/Info.plist<br>编辑完成后 用 Ctrl ＋O 存盘，Ctrl＋X 退出</p>
 <hr>
-<h2 id="u5C0F_u6280_u5DE7"><a href="#u5C0F_u6280_u5DE7" class="headerlink" title="小技巧"></a>小技巧</h2><p>用 Tab 键自动补齐命令<br>比如想到 /System 目录中去，输入 cd /Sy 然后按一下Tab 键，命令就会自动补齐成 cd /System<br>操作带名字中带有空格的文件和目录<br>空格在命令中写成 空格， 比如要进入 My Documents，命令为 cd My Documents<br>查看命令的详细帮助<br>man 命令名<br>比如要看看 ls 命令的详细用法，执行 man ls</p>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><p>用 Tab 键自动补齐命令<br>比如想到 /System 目录中去，输入 cd /Sy 然后按一下Tab 键，命令就会自动补齐成 cd /System<br>操作带名字中带有空格的文件和目录<br>空格在命令中写成 空格， 比如要进入 My Documents，命令为 cd My Documents<br>查看命令的详细帮助<br>man 命令名<br>比如要看看 ls 命令的详细用法，执行 man ls</p>
 
   </section>
   <!-- 多说评论框 start -->

@@ -39,10 +39,10 @@
     
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
-    <link rel="stylesheet" href="/css/uno.css" type="text/css">
-    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
-    <link rel="stylesheet" href="/css/archive.css" type="text/css">
-    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
 <body>
@@ -242,9 +242,9 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <p>感觉基础接口和网页接口中的两个access token在开发者文档始终讲的不太清楚，看的特别迷糊,所以总结一下。</p>
-<h3 id="u57FA_u7840_u63A5_u53E3"><a href="#u57FA_u7840_u63A5_u53E3" class="headerlink" title="基础接口"></a>基础接口</h3><p>基础接口中的access token有每日调用限制。所以需要获取后保存在数据库中或者单独建一个文件进行保存，每次获取时只需要检测是否失效，失效则再次获取并更新文件。这个在<br><a href="http://demo.open.weixin.qq.com/jssdk/sample.zip" target="_blank" rel="external">demo</a>中有栗子。</p>
-<h3 id="u7F51_u9875_u63A5_u53E3"><a href="#u7F51_u9875_u63A5_u53E3" class="headerlink" title="网页接口"></a>网页接口</h3><p>而网页接口中的access token是没有调用限制的。它的获取也略复杂，必须先获取code码作为请求参数才能获得。只能获取到一个微信用户信息，是与微信用户一对一的关系。因此在实际使用中每次都进行获取，因为code码五分钟内会失效。不过有一个refresh token（有效期比较长）可以进行重新获取。可以通过实际情况决定要不要保存refresh token。比如有些项目需求点击网页的都是已关注用户，那默认是静默授权，所以即使每次都重新获取code码再换取access token，对用户来讲也是一样的。而有些如果存在未关注用户，每次点进去都需要手动授权，那么保存refresh token就是一个很好的选择。</p>
-<h3 id="u5FAE_u4FE1_u516C_u4F17_u53F7_u7684_u6743_u9650_u4E0D_u540C_uFF0C_u83B7_u53D6_u7F51_u9875_u6388_u6743access_token_u4E5F_u6709_u5DEE_u522B"><a href="#u5FAE_u4FE1_u516C_u4F17_u53F7_u7684_u6743_u9650_u4E0D_u540C_uFF0C_u83B7_u53D6_u7F51_u9875_u6388_u6743access_token_u4E5F_u6709_u5DEE_u522B" class="headerlink" title="微信公众号的权限不同，获取网页授权access token也有差别"></a>微信公众号的权限不同，获取网页授权access token也有差别</h3><p>认证服务号有<strong>高级权限</strong>.可以静默获取access_token与openid模式.不管用户关注没关注,都能用二者拉取用户信息.</p>
+<h3 id="基础接口"><a href="#基础接口" class="headerlink" title="基础接口"></a>基础接口</h3><p>基础接口中的access token有每日调用限制。所以需要获取后保存在数据库中或者单独建一个文件进行保存，每次获取时只需要检测是否失效，失效则再次获取并更新文件。这个在<br><a href="http://demo.open.weixin.qq.com/jssdk/sample.zip" target="_blank" rel="external">demo</a>中有栗子。</p>
+<h3 id="网页接口"><a href="#网页接口" class="headerlink" title="网页接口"></a>网页接口</h3><p>而网页接口中的access token是没有调用限制的。它的获取也略复杂，必须先获取code码作为请求参数才能获得。只能获取到一个微信用户信息，是与微信用户一对一的关系。因此在实际使用中每次都进行获取，因为code码五分钟内会失效。不过有一个refresh token（有效期比较长）可以进行重新获取。可以通过实际情况决定要不要保存refresh token。比如有些项目需求点击网页的都是已关注用户，那默认是静默授权，所以即使每次都重新获取code码再换取access token，对用户来讲也是一样的。而有些如果存在未关注用户，每次点进去都需要手动授权，那么保存refresh token就是一个很好的选择。</p>
+<h3 id="微信公众号的权限不同，获取网页授权access-token也有差别"><a href="#微信公众号的权限不同，获取网页授权access-token也有差别" class="headerlink" title="微信公众号的权限不同，获取网页授权access token也有差别"></a>微信公众号的权限不同，获取网页授权access token也有差别</h3><p>认证服务号有<strong>高级权限</strong>.可以静默获取access_token与openid模式.不管用户关注没关注,都能用二者拉取用户信息.</p>
 <p>订阅号一般<strong>没有高级权限</strong>,需要没有关注订阅号的用户点击同意授权才能获取信息，而关注了的用户还是静默授权.</p>
 
   </section>

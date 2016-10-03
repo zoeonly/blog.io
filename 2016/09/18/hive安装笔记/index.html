@@ -7,7 +7,7 @@
     
 
     <title>
-      解决height：auto无效的方法 | Zoe 
+      hive安装笔记 | Zoe 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,28 +16,25 @@
     
     
 
-    <meta name="description" content="一种可能情况是因为父div中的div处于浮动状态。
-浮动是会脱离文档流的，内部两个层就不会局限于父层。所以父层不知道内部的高度。但清理浮动，可以把他们“拉”回来。
-父DIV加上 zoom:1;overflow:hidden;
-zoom:1会触发ie（ie8以下）的haslayout，刚好能清理浮动。
-overflow:hidden; 则对其他浏览器起作用（其实对ie7也会起作用）,主要作用是触发父">
+    <meta name="description" content="安装步骤
+在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量vi ~/.bash_profileexport HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
+export PATH=$PATH:$HIVE_HOME/bin之后编译环境变量source ~/.bash_profile
+为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决height：auto无效的方法 | Zoe">
-<meta property="og:url" content="http://xiongmengting.com/2016/01/26/解决height：auto无效的方法/index.html">
+<meta property="og:title" content="hive安装笔记 | Zoe">
+<meta property="og:url" content="http://xiongmengting.com/2016/09/18/hive安装笔记/index.html">
 <meta property="og:site_name" content="Zoe">
-<meta property="og:description" content="一种可能情况是因为父div中的div处于浮动状态。
-浮动是会脱离文档流的，内部两个层就不会局限于父层。所以父层不知道内部的高度。但清理浮动，可以把他们“拉”回来。
-父DIV加上 zoom:1;overflow:hidden;
-zoom:1会触发ie（ie8以下）的haslayout，刚好能清理浮动。
-overflow:hidden; 则对其他浏览器起作用（其实对ie7也会起作用）,主要作用是触发父">
-<meta property="og:updated_time" content="2016-01-26T03:45:09.000Z">
+<meta property="og:description" content="安装步骤
+在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量vi ~/.bash_profileexport HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
+export PATH=$PATH:$HIVE_HOME/bin之后编译环境变量source ~/.bash_profile
+为">
+<meta property="og:updated_time" content="2016-09-18T13:10:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决height：auto无效的方法 | Zoe">
-<meta name="twitter:description" content="一种可能情况是因为父div中的div处于浮动状态。
-浮动是会脱离文档流的，内部两个层就不会局限于父层。所以父层不知道内部的高度。但清理浮动，可以把他们“拉”回来。
-父DIV加上 zoom:1;overflow:hidden;
-zoom:1会触发ie（ie8以下）的haslayout，刚好能清理浮动。
-overflow:hidden; 则对其他浏览器起作用（其实对ie7也会起作用）,主要作用是触发父">
+<meta name="twitter:title" content="hive安装笔记 | Zoe">
+<meta name="twitter:description" content="安装步骤
+在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量vi ~/.bash_profileexport HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
+export PATH=$PATH:$HIVE_HOME/bin之后编译环境变量source ~/.bash_profile
+为">
     
     
       <link rel="alternate" href="/atom.xml" title="Zoe" type="application/atom+xml">
@@ -221,12 +218,12 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h2 class="post-title">解决height：auto无效的方法</h2>
+    <h2 class="post-title">hive安装笔记</h2>
 
     
 
     <div class="post-meta">
-      <time datetime="2016-01-26" class="post-meta__date date">2016-01-26</time> 
+      <time datetime="2016-09-18" class="post-meta__date date">2016-09-18</time> 
 
       <span class="post-meta__tags tags">
 
@@ -235,7 +232,7 @@ classes that you can use:
           
              &#8226; 标签:
             <font class="tags">
-              <a class="tags-link" href="/tags/javascript/">javascript</a>
+              <a class="tags-link" href="/tags/大数据/">大数据</a>
             </font>
           
 
@@ -247,16 +244,63 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <p>一种可能情况是因为父div中的div处于浮动状态。</p>
-<p>浮动是会脱离文档流的，内部两个层就不会局限于父层。所以父层不知道内部的高度。但清理浮动，可以把他们“拉”回来。</p>
-<p>父DIV加上 zoom:1;overflow:hidden;</p>
-<p>zoom:1会触发ie（ie8以下）的haslayout，刚好能清理浮动。</p>
-<p>overflow:hidden; 则对其他浏览器起作用（其实对ie7也会起作用）,主要作用是触发父div使之成为一个BFC容器（BFC内部的元素和外部的元素绝对不会互相影响，因此， 当BFC外部存在浮动时，它不应该影响BFC内部Box的布局，BFC会通过变窄，而不与浮动有重叠。同样的，当BFC内部有浮动时，为了不影响外部元素的布局，BFC计算高度时会包括浮动的高度）</p>
-<p><a href="http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html" title="关于BFC" target="_blank" rel="external">关于BFC</a><br>另外，当父DIV有固定高度会同zoom:1;一样会触发ie（ie8以下）的haslayout，但auto值却不会。</p>
+    <h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
+<li>在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装<br>放置到相应目录后修改和配置环境变量<br><code>vi ~/.bash_profile</code><br><code>export HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
+export PATH=$PATH:$HIVE_HOME/bin</code><br>之后编译环境变量<br><code>source ~/.bash_profile</code></li>
+<li>为了避免可能遇到的问题，将hive下的新版本jline的JAR包替换hadoop根目录hadoop-2.6.0/share/hadoop/yarn/lib下的该jar包,因为Hadoop里面的版本过时。</li>
+<li><p>然后配置mysql元数据库<br><code>mysql.server start
+mysql -uroot #root用户进入mysql
+mysql&gt; CREATE DATABASE metastore;
+mysql&gt; USE metastore;
+mysql&gt; CREATE USER &#39;hiveuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;;
+mysql&gt; GRANT SELECT,INSERT,UPDATE,DELETE,ALTER,CREATE ON metastore.* TO &#39;hiveuser&#39;@&#39;localhost&#39;;</code></p>
+</li>
+<li><p>拷贝生成hive的配置文件,在conf目录下：<br><code>cp hive-default.xml.template hive-default.xml
+cp hive-default.xml.template hive-site.xml
+cp hive-exec-log4j2.properties.template hive-exec-log4j2.properties
+cp hive-log4j2.properties.template hive-log4j2.properties
+cp beeline-log4j2.properties.template beeline-log4j2.properties</code></p>
+</li>
+<li>在hive-site.xml添加或者编辑如下内容<br><code>&lt;property&gt;
+&lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
+&lt;value&gt;jdbc:mysql://localhost/metastore&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;
+&lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;
+&lt;value&gt;hiveuser&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;
+&lt;value&gt;password&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;datanucleus.fixedDatastore&lt;/name&gt;
+&lt;value&gt;false&lt;/value&gt;
+&lt;/property&gt;</code></li>
+<li>测试hive是否工作<br><code>$ hive;
+hive &gt; show tables;
+hive&gt; create table temp_table temp_col string;</code></li>
+</ul>
+<hr>
+<h2 id="测试过程中遇到以下问题："><a href="#测试过程中遇到以下问题：" class="headerlink" title="测试过程中遇到以下问题："></a>测试过程中遇到以下问题：</h2><p><code>Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient</code><br>解决方法：先启动hive –service metastore &amp;<br>结果出现问题：<br><code>The specified datastore driver (&quot;com.mysql.jdbc.Driver&quot;) was not found in the CLASSPATH</code><br>解决方法：在电脑中找到mysql-connector-Java-x.x.x.jar文件复制到hive的lib目录下,再次尝试，发现：<br><code>Required table missing : &quot;&quot;VERSION&quot;&quot; in Catalog &quot;&quot; Schema &quot;&quot;. DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable &quot;datanucleus.autoCreateTables&quot;</code><br>解决方法：在hive-site.xml加上<br>`</p>
+<p><property></property></p>
+<p><name>datanucleus.autoCreateTables</name></p>
+<p><value>True</value><br><br><code>发现搞定当前问题
+接着输入hive,还是有问题：</code><br>java.net.ConnectException: Connection refused; For more details see:<br><a href="http://wiki.apache.org/hadoop/ConnectionRefused" target="_blank" rel="external">http://wiki.apache.org/hadoop/ConnectionRefused</a><br><code>搞不定，试试通过** hive –service cli **命令启动，得到错误</code><br>Exception in thread “main” java.lang.RuntimeException: java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: ${system:java.io.tmpdir%7D/$%7Bsystem:user.name%7D<br><code>解决步骤：
+1.查看hive-site.xml配置，会看到配置值含有&quot;system:java.io.tmpdir&quot;的配置项
+2.新建文件夹{YOUR OWN PATH}/hive-0.14.0-bin/iotmp
+3.在hive-site.xml配置里面改完下面三个配置项</code></p>
+<p><property><br>  <name>hive.exec.local.scratchdir</name><br>  <value>$HIVE_HOME/iotmp</value><br>  <description>Local scratch space for Hive jobs</description><br></property></p>
+<p><property><br>  <name>hive.querylog.location</name><br>  <value>$HIVE_HOME/iotmp</value><br>  <description>Location of Hive run time structured log file</description><br></property></p>
+<p><property><br>  <name>hive.downloaded.resources.dir</name><br>  <value>$HIVE_HOME/iotmp</value><br>  <description>Temporary local directory for added resources in the remote file system.</description><br></property><br>`<br>就大功告成了，此时无论输入hive还是hive –service cli都可以妥妥的启动hive cli辣～<br><strong> 实际采用远程接口jdbc,odbc编程比较多，需要先开启远程接口服务：<br>hive -service hiveserver &amp; </strong></p>
 
   </section>
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-解决height：auto无效的方法" data-title="解决height：auto无效的方法" data-url="http://xiongmengting.com/2016/01/26/解决height：auto无效的方法/"></div>
+  <div class="ds-thread" data-thread-key="post-hive安装笔记" data-title="hive安装笔记" data-url="http://xiongmengting.com/2016/09/18/hive安装笔记/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
