@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      canvas基础 | Zoe 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Zoe">
+    
+    
+
+    <meta name="description" content="获取绘制上下文时先检测方法 是否存在 123if (cxt.getContext) &amp;#123;//&amp;#125;
+toDataURL()取得绘制元素的URL（将绘制的画布形成资源文件）
+fillStyle strokeStyle 填充和描边fillRect() stokeRect() clearRect() 填充矩形，画矩形，清除矩形区域（一般用来重置画布）lineWidth 设置线宽
+ 绘制路径">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas基础 | Zoe">
+<meta property="og:url" content="http://xiongmengting.com/2016/01/09/canvas基础/index.html">
+<meta property="og:site_name" content="Zoe">
+<meta property="og:description" content="获取绘制上下文时先检测方法 是否存在 123if (cxt.getContext) &amp;#123;//&amp;#125;
+toDataURL()取得绘制元素的URL（将绘制的画布形成资源文件）
+fillStyle strokeStyle 填充和描边fillRect() stokeRect() clearRect() 填充矩形，画矩形，清除矩形区域（一般用来重置画布）lineWidth 设置线宽
+ 绘制路径">
+<meta property="og:updated_time" content="2016-01-09T15:24:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="canvas基础 | Zoe">
+<meta name="twitter:description" content="获取绘制上下文时先检测方法 是否存在 123if (cxt.getContext) &amp;#123;//&amp;#125;
+toDataURL()取得绘制元素的URL（将绘制的画布形成资源文件）
+fillStyle strokeStyle 填充和描边fillRect() stokeRect() clearRect() 填充矩形，画矩形，清除矩形区域（一般用来重置画布）lineWidth 设置线宽
+ 绘制路径">
+    
+    
+      <link rel="alternate" href="/atom.xml" title="Zoe" type="application/atom+xml">
+    
+    
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+
+</head>
+<body>
+    <a href="https://github.com/zoeonly"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+<meta name="baidu-site-verification" content="H3swprvhPV" />
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Zoe</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Days are numbered
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <!-- <li class="navigation__item">
+        <a href="https://github.com/zoeonly" title="GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+      -->
+      <li class="navigation__item">
+        <a href="https://www.facebook.com/profile.php?id=100005454166638" title="Facebook">
+          <i class='icon icon-social-facebook'></i>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="https://mail.qq.com/" title="Mail:716202820@qq.com">
+          <i class='icon icon-mail'></i>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="https://www.zhihu.com/people/qiong-yu-zhen" title="ZhiHu">
+          <i class='icon icon-social-500px'></i>
+        </a>
+      </li>
+    
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d2d31aff27b8e9643c33f0fb968e00e1";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74730232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h2 class="post-title">canvas基础</h2>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-01-09" class="post-meta__date date">2016-01-09</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/canvas/">canvas</a>, <a class="tags-link" href="/tags/javascript/">javascript</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>获取绘制上下文时先检测方法<strong> 是否存在 </strong><br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="comment">(cxt.getContext)</span> &#123;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>toDataURL()取得绘制元素的URL（将绘制的画布形成资源文件）</p>
+<p>fillStyle strokeStyle 填充和描边<br>fillRect() stokeRect() clearRect() 填充矩形，画矩形，清除矩形区域（一般用来重置画布）<br>lineWidth 设置线宽</p>
+<p><strong> 绘制路径 </strong><br>arc() arcTo() …</p>
+<p><strong> 绘制文本 </strong><br>context.font = “”;<br>context.textAlign = “center”;<br>context.textBaseline = “middle”;<br>context.fillText(“12”, 100, 20);<br>文本过大，则通过方法测得大小后进行调整<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var fontSize = <span class="number">100</span>;</span><br><span class="line">context.font = fontSize + <span class="string">"px Arial"</span>;</span><br><span class="line">context.textAlign = <span class="string">"center"</span>;</span><br><span class="line">context.textBaseline = <span class="string">"middle"</span>;</span><br><span class="line"><span class="keyword">while</span> (context.measureText(<span class="string">"Hello, world!"</span>).width &gt; <span class="number">140</span>) &#123;</span><br><span class="line">    fontSize--;</span><br><span class="line">    context.font = fontSize + <span class="string">"px Arial"</span>;</span><br><span class="line">&#125;</span><br><span class="line">context.fillText(<span class="string">"Hello, world!"</span>, <span class="number">100</span>, <span class="number">20</span>);</span><br></pre></td></tr></table></figure></p>
+<p><strong> 变换 </strong><br>rotate 绕远点旋转<br>translate 移动原点坐标<br>scale 缩放图像<br>transform 直接修改变换矩阵<br>setTrabsform 将矩阵重置为默认状态再调用transform</p>
+<p><strong> save方法 </strong>，调用后，所有设置压入堆栈，然后进行上下文设置，完成后再调用restore弹出设置信息，一级一级返回先前的设置</p>
+<p><strong> 绘制图像 </strong> 可以将一副图像绘制到画布中，drawImage方法，但是绘制的图像不能来自其他域，否则会出错</p>
+<p><strong> 阴影 </strong><br><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">context</span>.shadowColor = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">context</span>.shadowOffsetX = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">context</span>.shadowOffsetY = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">context</span>.shadowBlur = <span class="string">""</span>;//模糊像素</span><br></pre></td></tr></table></figure></p>
+<p><strong> 渐变 </strong><br>创建径向渐变如下：<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.<span class="built_in">color</span> = ctx.createRadialGradient(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="number">0</span>,<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.radius);</span><br><span class="line"><span class="keyword">this</span>.<span class="built_in">color</span>.addColorStop(<span class="number">0</span>,<span class="keyword">this</span>.sColor);</span><br><span class="line"><span class="keyword">this</span>.<span class="built_in">color</span>.addColorStop(<span class="number">1</span>,<span class="keyword">this</span>.eColor);</span><br><span class="line">ctx.fillStyle = <span class="keyword">this</span>.<span class="built_in">color</span>;</span><br></pre></td></tr></table></figure></p>
+<p>此外还可以创建线性渐变：createLinearGradient</p>
+<p><strong> 模式 </strong><br>其实就是创建重复的图像<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">context.<span class="function"><span class="title">createPattern</span><span class="params">(img,<span class="string">"repeat"</span>)</span></span><span class="comment">//第一个元素可以为video或canvas，第二个可以为repeat-x,repeat-y</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> 使用图像数据 </strong><br>获得图像的像素信息放在一个数组中，第零到第三个元素分别表示第一个像素的红，绿，蓝和透明度。以此类推<br>getImageData() putImageData()<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">var</span> canvas = document.getElementById(<span class="string">"mycanvas"</span>);</span><br><span class="line">    <span class="keyword">if</span> (canvas.getContext) &#123;</span><br><span class="line">        var context = canvas.getContext(<span class="string">"2d"</span>),</span><br><span class="line">            img = document.images[<span class="number">0</span>],</span><br><span class="line">            imgData, <span class="typedef"><span class="keyword">data</span>,</span></span><br><span class="line">            i, len, average, red,</span><br><span class="line">            green, blue, alpha;</span><br><span class="line"></span><br><span class="line">        context.drawImage(img, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        imgData = context.getImageData(<span class="number">0</span>, <span class="number">0</span>, img.height, img.width);</span><br><span class="line">        <span class="typedef"><span class="keyword">data</span> = imgData.<span class="keyword">data</span>;</span></span><br><span class="line">        len = <span class="typedef"><span class="keyword">data</span>.length;</span></span><br><span class="line"></span><br><span class="line">        for (i=<span class="number">0</span>; i &lt; len; i+=<span class="number">4</span>) &#123;</span><br><span class="line">            red = <span class="typedef"><span class="keyword">data</span>[i];</span></span><br><span class="line">            green = <span class="typedef"><span class="keyword">data</span>[i+1];</span></span><br><span class="line">            blue = <span class="typedef"><span class="keyword">data</span>[i+2];</span></span><br><span class="line">            alpha = <span class="typedef"><span class="keyword">data</span>[i+3]</span></span><br><span class="line">            average = <span class="type">Math</span>.floor((red + green + blue)/<span class="number">3</span>)    ;</span><br><span class="line">            <span class="typedef"><span class="keyword">data</span>[i] = <span class="keyword">data</span>[i+1] = <span class="keyword">data</span>[i+2] = average;</span></span><br><span class="line">        &#125;</span><br><span class="line">        imgData.<span class="typedef"><span class="keyword">data</span> = <span class="keyword">data</span>;</span></span><br><span class="line">        context.putImageData(imgData, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>本地尝试会有跨域污染的问题</p>
+<p><strong> 合成 </strong><br>应用到2d上下文中的属性<br>globalCompositionOperation,设置合成模式有十一种取值<br>globalAlpha设置全局透明度</p>
+<p>WebGL  是针对 canvas画布的3D上下文。</p>
+
+  </section>
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-canvas基础" data-title="canvas基础" data-url="http://xiongmengting.com/2016/01/09/canvas基础/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xiongmengting"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

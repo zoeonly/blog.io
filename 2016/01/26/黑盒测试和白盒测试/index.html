@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      黑盒测试和白盒测试 | Zoe 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Zoe">
+    
+    
+
+    <meta name="description" content="黑盒测试  边界值测试 边界值测试的效率有四个评价指标：用例数量，是否冗余，用例的覆盖范围和是否方便错误追踪，根据这四个指标我们对不同的边界值测试进行了评估。
+ 等价类测试 等价类测试则有强组合形式的覆盖和弱组合形式的覆盖，可根据用例的规模和数量选用合适的形式进行测试的覆盖。同时应注意的一点是等价类的划分要清晰合理，否则会出现原输入中不存在输入条件，比如上课提到的年月日输入的等价类划分，很可能就会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="黑盒测试和白盒测试 | Zoe">
+<meta property="og:url" content="http://xiongmengting.com/2016/01/26/黑盒测试和白盒测试/index.html">
+<meta property="og:site_name" content="Zoe">
+<meta property="og:description" content="黑盒测试  边界值测试 边界值测试的效率有四个评价指标：用例数量，是否冗余，用例的覆盖范围和是否方便错误追踪，根据这四个指标我们对不同的边界值测试进行了评估。
+ 等价类测试 等价类测试则有强组合形式的覆盖和弱组合形式的覆盖，可根据用例的规模和数量选用合适的形式进行测试的覆盖。同时应注意的一点是等价类的划分要清晰合理，否则会出现原输入中不存在输入条件，比如上课提到的年月日输入的等价类划分，很可能就会">
+<meta property="og:updated_time" content="2016-01-26T03:39:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="黑盒测试和白盒测试 | Zoe">
+<meta name="twitter:description" content="黑盒测试  边界值测试 边界值测试的效率有四个评价指标：用例数量，是否冗余，用例的覆盖范围和是否方便错误追踪，根据这四个指标我们对不同的边界值测试进行了评估。
+ 等价类测试 等价类测试则有强组合形式的覆盖和弱组合形式的覆盖，可根据用例的规模和数量选用合适的形式进行测试的覆盖。同时应注意的一点是等价类的划分要清晰合理，否则会出现原输入中不存在输入条件，比如上课提到的年月日输入的等价类划分，很可能就会">
+    
+    
+      <link rel="alternate" href="/atom.xml" title="Zoe" type="application/atom+xml">
+    
+    
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+
+</head>
+<body>
+    <a href="https://github.com/zoeonly"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+<meta name="baidu-site-verification" content="H3swprvhPV" />
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Zoe</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Days are numbered
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <!-- <li class="navigation__item">
+        <a href="https://github.com/zoeonly" title="GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+      -->
+      <li class="navigation__item">
+        <a href="https://www.facebook.com/profile.php?id=100005454166638" title="Facebook">
+          <i class='icon icon-social-facebook'></i>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="https://mail.qq.com/" title="Mail:716202820@qq.com">
+          <i class='icon icon-mail'></i>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="https://www.zhihu.com/people/qiong-yu-zhen" title="ZhiHu">
+          <i class='icon icon-social-500px'></i>
+        </a>
+      </li>
+    
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?d2d31aff27b8e9643c33f0fb968e00e1";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74730232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h2 class="post-title">黑盒测试和白盒测试</h2>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-01-26" class="post-meta__date date">2016-01-26</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/软件测试/">软件测试</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p><strong> 黑盒测试 </strong><br><strong><em> 边界值测试 </em></strong><br>边界值测试的效率有四个评价指标：用例数量，是否冗余，用例的覆盖范围和是否方便错误追踪，根据这四个指标我们对不同的边界值测试进行了评估。</p>
+<p><strong><em> 等价类测试 </em></strong><br>等价类测试则有强组合形式的覆盖和弱组合形式的覆盖，可根据用例的规模和数量选用合适的形式进行测试的覆盖。同时应注意的一点是等价类的划分要清晰合理，否则会出现原输入中不存在输入条件，比如上课提到的年月日输入的等价类划分，很可能就会因为忽略了输入之间的约束条件导致等价类划分不正确。</p>
+<p><strong><em> 场景法 </em></strong><br>场景法的核心在于基本流和备选流的场景设计，将使用频率多，发生可能性大的事件流（该事件流具有最大的风险可能性）作为基本流，将判定或循环判定的不同触发条件引起的事件流作为备选流构造场景图，再根据场景图得到可能的场景，此时不能仅将场景图作为一个图来考虑，还需考虑实际情况，即基本流和备选流之间的制约关系来考虑不同的场景。此外，如果同一个校验点有多个备选流且备选流的起点和重点是一样的话，可以考虑将这些备选流合并以简化场景图。</p>
+<p>边界值测试重点在于考查边界值及附近的数据，等价类测试侧重于找到整个输入域中最具有代表性的数据，而场景法则注重对于事件流的理解。</p>
+<hr>
+<p><strong> 白盒测试 </strong><br>白盒测试主要用于单元测试和集成测试，通常不用于系统测试，但是有些方法和思路可以为系统测试做参考，比如白盒测试中的路径测试对路径的覆盖就可以为黑盒测试中的场景法中基本流和备选流的遍历提供参考意义。白盒测试主要侧重于程序的源代码，即实现的细节，针对性很强。</p>
+<p>白盒测试的主要方法有：逻辑覆盖，包括语句覆盖，判定覆盖，条件覆盖，判定/条件覆盖，条件组合覆盖等（覆盖标准发现错误的能力呈由弱到强）；基路径测试；静态白盒测试。</p>
+<p><strong><em> 逻辑覆盖 </em></strong></p>
+<p>逻辑覆盖主要侧重于程序的逻辑结构，根据不同逻辑结构（顺序结构，判断分支和循环）的风险程度组合使用覆盖指标来衡量。</p>
+<p>语句覆盖保证每条可执行语句都被至少执行一次，它的覆盖形式类似于等价测试中的弱组合的形式的覆盖，需要注意的的是屏蔽陷阱，即在与，或关系中，如果前一个判定条件的取值真假会屏蔽后一个语句的真假值（或：前一个取真，后一个不论真假整个表达式的值都为真，与的话类似）。因为语句覆盖侧重的是语句所以无法发现控制流的缺陷。</p>
+<p>分支覆盖是保证每个判定节点的取真和取假至少执行一次，也是一种弱组合形式的覆盖。然而判定覆盖没有测试到每个简单逻辑判定条件的正确性，所以出现了条件覆盖，即对每个子判定条件进行覆盖。为了结合判定覆盖和条件覆盖的利弊，出现了判定/条件覆盖，但是虽然理论上的效果很好，实际操作却存在技巧和难度。条件组合是满足每个判定节点中所有简单判定条件的各种可能取值的组合至少执行一次，这种方法也是理论上很好，但是实际的用例数量可能会很大。</p>
+<p><strong><em> 基路径测试 </em></strong></p>
+<p>基路径测试的基础是程序图，圈复杂度决定了基路径的个数（但是结构上的缺陷可能导致路径执行不到或者有冗余），为了确保基本路径集中的每一条路径的执行，根据判断结点给出的条件，选择适当的数据以保证某一条路径可以被测试到。</p>
+<p><strong><em> 静态白盒测试 </em></strong></p>
+<p>静态白盒测试有：代码检查（包括桌面检查desk checking，代码走查walk through，代码审查Ispection和技术评审review），静态结构分析。</p>
+<p><strong><strong> 桌面检查(Desk checking) </strong></strong></p>
+<p>桌面检查(desk checking)是一种传统的检查方法，由程序员检查自己编写的程序。程序员在程序通过编译之后对源代码代码进行分析、检验，并补充相关的文档，目的是发现程序中的错误。</p>
+<p><strong><strong> 代码走查(Walk hrough) </strong></strong></p>
+<p>代码走查walk through就是针对代码，在假想的输入情况下，逐行的浏览代码，走查代码中潜在的缺陷并记录结果的过程。以小组会议方式进行，每小组3-5人。与代码审查不同的是，走查要求与会者扮演计算机的角色让测试用例沿被测程序的逻辑运行，是在模拟动态测试；而代码审查更多的是静态测试。</p>
+<p><strong><strong> 代码审查(Ispection) </strong></strong></p>
+<p>代码审查Ispection是由一组人通过阅读、讨论和争议对程序进行静态分析的过程，以小组会的方式进行。审查小组一般由若干程序员（包括程序代码的设计者）和代码检查人员组成。会前把设计规格说明书、控制流程图、程序文本以及要求、规范、错误检查清单交给与会者，开会时程序作者朗读解释程序，其他人则集中精力，捕捉程序在结构、功能、编码风格等方面的问题。</p>
+<p><strong><strong> 静态结构分析 </strong></strong></p>
+<p>函数调用关系图和程序控制流图的分析。调用关系图的根部调用点，被多次上层节点调用的底层函数，多接口的情况都是需要重视的。控制流图则关注入出口数量，是否存在孤立节点和最短最长路径的差别来判断函数结构是否健壮和出现缺陷的概率。</p>
+
+  </section>
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-黑盒测试和白盒测试" data-title="黑盒测试和白盒测试" data-url="http://xiongmengting.com/2016/01/26/黑盒测试和白盒测试/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xiongmengting"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
