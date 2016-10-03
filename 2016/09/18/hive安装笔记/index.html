@@ -17,24 +17,30 @@
     
 
     <meta name="description" content="安装步骤
-在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量vi ~/.bash_profileexport HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
-export PATH=$PATH:$HIVE_HOME/bin之后编译环境变量source ~/.bash_profile
-为">
+在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile
+
+
+12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin
+之后编译环境变量1source">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hive安装笔记 | Zoe">
 <meta property="og:url" content="http://xiongmengting.com/2016/09/18/hive安装笔记/index.html">
 <meta property="og:site_name" content="Zoe">
 <meta property="og:description" content="安装步骤
-在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量vi ~/.bash_profileexport HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
-export PATH=$PATH:$HIVE_HOME/bin之后编译环境变量source ~/.bash_profile
-为">
-<meta property="og:updated_time" content="2016-09-18T13:10:21.000Z">
+在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile
+
+
+12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin
+之后编译环境变量1source">
+<meta property="og:updated_time" content="2016-10-03T03:22:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hive安装笔记 | Zoe">
 <meta name="twitter:description" content="安装步骤
-在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量vi ~/.bash_profileexport HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
-export PATH=$PATH:$HIVE_HOME/bin之后编译环境变量source ~/.bash_profile
-为">
+在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile
+
+
+12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin
+之后编译环境变量1source">
     
     
       <link rel="alternate" href="/atom.xml" title="Zoe" type="application/atom+xml">
@@ -245,58 +251,35 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li>在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装<br>放置到相应目录后修改和配置环境变量<br><code>vi ~/.bash_profile</code><br><code>export HIVE_HOME={YOUR OWN PATH}apache-hive-2.0.0
-export PATH=$PATH:$HIVE_HOME/bin</code><br>之后编译环境变量<br><code>source ~/.bash_profile</code></li>
+<li>在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装<br>放置到相应目录后修改和配置环境变量<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">vi</span> ~/.bash_profile</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> HIVE_HOME=&#123;YOUR OWN PATH&#125;apache-hive-2.0.0</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HIVE_HOME</span>/bin</div></pre></td></tr></table></figure>
+<p>之后编译环境变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.bash_profile</div></pre></td></tr></table></figure></p>
+<ul>
 <li>为了避免可能遇到的问题，将hive下的新版本jline的JAR包替换hadoop根目录hadoop-2.6.0/share/hadoop/yarn/lib下的该jar包,因为Hadoop里面的版本过时。</li>
-<li><p>然后配置mysql元数据库<br><code>mysql.server start
-mysql -uroot #root用户进入mysql
-mysql&gt; CREATE DATABASE metastore;
-mysql&gt; USE metastore;
-mysql&gt; CREATE USER &#39;hiveuser&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;;
-mysql&gt; GRANT SELECT,INSERT,UPDATE,DELETE,ALTER,CREATE ON metastore.* TO &#39;hiveuser&#39;@&#39;localhost&#39;;</code></p>
+<li><p>然后配置mysql元数据库</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mysql.server start</div><div class="line">mysql -uroot #root用户进入mysql</div><div class="line">mysql&gt; <span class="keyword">CREATE</span> DATABASE metastore;</div><div class="line">mysql&gt; USE metastore;</div><div class="line">mysql&gt; <span class="keyword">CREATE</span> USER <span class="string">'hiveuser'</span>@<span class="string">'localhost'</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">'password'</span>;</div><div class="line">mysql&gt; GRANT <span class="keyword">SELECT</span>,INSERT,UPDATE,DELETE,ALTER,<span class="keyword">CREATE</span> <span class="keyword">ON</span> metastore.* <span class="keyword">TO</span> <span class="string">'hiveuser'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
 </li>
-<li><p>拷贝生成hive的配置文件,在conf目录下：<br><code>cp hive-default.xml.template hive-default.xml
-cp hive-default.xml.template hive-site.xml
-cp hive-exec-log4j2.properties.template hive-exec-log4j2.properties
-cp hive-log4j2.properties.template hive-log4j2.properties
-cp beeline-log4j2.properties.template beeline-log4j2.properties</code></p>
+<li><p>拷贝生成hive的配置文件,在conf目录下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cp hive-default<span class="selector-class">.xml</span><span class="selector-class">.template</span> hive-default<span class="selector-class">.xml</span></div><div class="line">cp hive-default<span class="selector-class">.xml</span><span class="selector-class">.template</span> hive-site<span class="selector-class">.xml</span></div><div class="line">cp hive-exec-log4j2<span class="selector-class">.properties</span><span class="selector-class">.template</span> hive-exec-log4j2<span class="selector-class">.properties</span></div><div class="line">cp hive-log4j2<span class="selector-class">.properties</span><span class="selector-class">.template</span> hive-log4j2<span class="selector-class">.properties</span></div><div class="line">cp beeline-log4j2<span class="selector-class">.properties</span><span class="selector-class">.template</span> beeline-log4j2.properties</div></pre></td></tr></table></figure>
 </li>
-<li>在hive-site.xml添加或者编辑如下内容<br><code>&lt;property&gt;
-&lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
-&lt;value&gt;jdbc:mysql://localhost/metastore&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-&lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;
-&lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-&lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;
-&lt;value&gt;hiveuser&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-&lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;
-&lt;value&gt;password&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-&lt;name&gt;datanucleus.fixedDatastore&lt;/name&gt;
-&lt;value&gt;false&lt;/value&gt;
-&lt;/property&gt;</code></li>
-<li>测试hive是否工作<br><code>$ hive;
-hive &gt; show tables;
-hive&gt; create table temp_table temp_col string;</code></li>
+<li><p>在hive-site.xml添加或者编辑如下内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionURL<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>jdbc:mysql://localhost/metastore<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionDriverName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionUserName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>hiveuser<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionPassword<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>password<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>datanucleus.fixedDatastore<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>测试hive是否工作</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> hive;</div><div class="line">hive &gt; show tables;</div><div class="line">hive&gt; create <span class="keyword">table</span> temp_table <span class="comment">temp_col string</span>;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <hr>
-<h2 id="测试过程中遇到以下问题："><a href="#测试过程中遇到以下问题：" class="headerlink" title="测试过程中遇到以下问题："></a>测试过程中遇到以下问题：</h2><p><code>Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient</code><br>解决方法：先启动hive –service metastore &amp;<br>结果出现问题：<br><code>The specified datastore driver (&quot;com.mysql.jdbc.Driver&quot;) was not found in the CLASSPATH</code><br>解决方法：在电脑中找到mysql-connector-Java-x.x.x.jar文件复制到hive的lib目录下,再次尝试，发现：<br><code>Required table missing : &quot;&quot;VERSION&quot;&quot; in Catalog &quot;&quot; Schema &quot;&quot;. DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable &quot;datanucleus.autoCreateTables&quot;</code><br>解决方法：在hive-site.xml加上<br>`</p>
-<p><property></property></p>
-<p><name>datanucleus.autoCreateTables</name></p>
-<p><value>True</value><br><br><code>发现搞定当前问题
-接着输入hive,还是有问题：</code><br>java.net.ConnectException: Connection refused; For more details see:<br><a href="http://wiki.apache.org/hadoop/ConnectionRefused" target="_blank" rel="external">http://wiki.apache.org/hadoop/ConnectionRefused</a><br><code>搞不定，试试通过** hive –service cli **命令启动，得到错误</code><br>Exception in thread “main” java.lang.RuntimeException: java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: ${system:java.io.tmpdir%7D/$%7Bsystem:user.name%7D<br><code>解决步骤：
-1.查看hive-site.xml配置，会看到配置值含有&quot;system:java.io.tmpdir&quot;的配置项
-2.新建文件夹{YOUR OWN PATH}/hive-0.14.0-bin/iotmp
-3.在hive-site.xml配置里面改完下面三个配置项</code></p>
-<p><property><br>  <name>hive.exec.local.scratchdir</name><br>  <value>$HIVE_HOME/iotmp</value><br>  <description>Local scratch space for Hive jobs</description><br></property></p>
-<p><property><br>  <name>hive.querylog.location</name><br>  <value>$HIVE_HOME/iotmp</value><br>  <description>Location of Hive run time structured log file</description><br></property></p>
-<p><property><br>  <name>hive.downloaded.resources.dir</name><br>  <value>$HIVE_HOME/iotmp</value><br>  <description>Temporary local directory for added resources in the remote file system.</description><br></property><br>`<br>就大功告成了，此时无论输入hive还是hive –service cli都可以妥妥的启动hive cli辣～<br><strong> 实际采用远程接口jdbc,odbc编程比较多，需要先开启远程接口服务：<br>hive -service hiveserver &amp; </strong></p>
+<h2 id="测试过程中遇到以下问题："><a href="#测试过程中遇到以下问题：" class="headerlink" title="测试过程中遇到以下问题："></a>测试过程中遇到以下问题：</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Unable to instantiate org<span class="selector-class">.apache</span><span class="selector-class">.hadoop</span><span class="selector-class">.hive</span><span class="selector-class">.ql</span><span class="selector-class">.metadata</span><span class="selector-class">.SessionHiveMetaStoreClient</span></div></pre></td></tr></table></figure>
+<p>解决方法：先启动hive –service metastore &amp;<br>结果出现问题：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The specified datastore driver (<span class="string">"com.mysql.jdbc.Driver"</span>) was <span class="keyword">not</span> found <span class="keyword">in</span> <span class="keyword">the</span> CLASSPATH</div></pre></td></tr></table></figure></p>
+<p>解决方法：在电脑中找到mysql-connector-Java-x.x.x.jar文件复制到hive的lib目录下,再次尝试，发现：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Required table missing : <span class="string">""</span>VERSION<span class="string">""</span> <span class="keyword">in</span> Catalog <span class="string">""</span> Schema <span class="string">""</span>. DataNucleus requires this table <span class="keyword">to</span> perform <span class="keyword">its</span> persistence operations. Either your MetaData <span class="keyword">is</span> incorrect, <span class="keyword">or</span> you need <span class="keyword">to</span> enable <span class="string">"datanucleus.autoCreateTables"</span></div></pre></td></tr></table></figure></p>
+<p>解决方法：在hive-site.xml加上<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>datanucleus.autoCreateTables<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>True<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>发现搞定当前问题<br>接着输入hive,还是有问题：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.net.<span class="string">ConnectException:</span> Connection refused; For more details <span class="string">see:</span></div><div class="line"><span class="string">http:</span><span class="comment">//wiki.apache.org/hadoop/ConnectionRefused</span></div></pre></td></tr></table></figure></p>
+<p>搞不定，试试通过<strong> hive –service cli </strong>命令启动，得到错误<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Exception <span class="keyword">in</span> thread <span class="string">"main"</span> java.lang.<span class="string">RuntimeException:</span> java.lang.<span class="string">IllegalArgumentException:</span> java.net.<span class="string">URISyntaxException:</span> Relative path <span class="keyword">in</span> absolute <span class="string">URI:</span> $&#123;<span class="string">system:</span>java.io.tmpdir%<span class="number">7</span>D/$%<span class="number">7</span><span class="string">Bsystem:</span>user.name%<span class="number">7</span>D</div></pre></td></tr></table></figure></p>
+<p>解决步骤：<br>1.查看hive-site.xml配置，会看到配置值含有”system:java.io.tmpdir”的配置项<br>2.新建文件夹{YOUR OWN PATH}/hive-0.14.0-bin/iotmp<br>3.在hive-site.xml配置里面改完下面三个配置项<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span>&gt;</div><div class="line">  &lt;<span class="built_in">name</span>&gt;hive.exec.<span class="keyword">local</span>.scratchdir&lt;/<span class="built_in">name</span>&gt;</div><div class="line">  &lt;value&gt;$HIVE_HOME/iotmp&lt;/value&gt;</div><div class="line">  &lt;description&gt;Local scratch <span class="literal">space</span> <span class="keyword">for</span> Hive jobs&lt;/description&gt;</div><div class="line">&lt;/<span class="keyword">property</span>&gt;</div><div class="line">&lt;<span class="keyword">property</span>&gt;</div><div class="line">  &lt;<span class="built_in">name</span>&gt;hive.querylog.location&lt;/<span class="built_in">name</span>&gt;</div><div class="line">  &lt;value&gt;$HIVE_HOME/iotmp&lt;/value&gt;</div><div class="line">  &lt;description&gt;Location <span class="keyword">of</span> Hive <span class="built_in">run</span> <span class="built_in">time</span> structured <span class="built_in">log</span> <span class="built_in">file</span>&lt;/description&gt;</div><div class="line">&lt;/<span class="keyword">property</span>&gt;</div><div class="line">&lt;<span class="keyword">property</span>&gt;</div><div class="line">  &lt;<span class="built_in">name</span>&gt;hive.downloaded.resources.dir&lt;/<span class="built_in">name</span>&gt;</div><div class="line">  &lt;value&gt;$HIVE_HOME/iotmp&lt;/value&gt;</div><div class="line">  &lt;description&gt;Temporary <span class="keyword">local</span> directory <span class="keyword">for</span> added resources <span class="keyword">in</span> <span class="keyword">the</span> remote <span class="built_in">file</span> system.&lt;/description&gt;</div><div class="line">&lt;/<span class="keyword">property</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>就大功告成了，此时无论输入hive还是hive –service cli都可以妥妥的启动hive cli辣～<br><strong> 实际采用远程接口jdbc,odbc编程比较多，需要先开启远程接口服务：<br>hive -service hiveserver &amp; </strong></p>
 
   </section>
   <!-- 多说评论框 start -->
