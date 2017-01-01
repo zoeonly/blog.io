@@ -442,9 +442,9 @@
     </summary>
     
     
-      <category term="命令行" scheme="http://yoursite.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    
       <category term="操作系统" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="命令行" scheme="http://yoursite.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
   </entry>
   
@@ -465,9 +465,9 @@
     </summary>
     
     
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
       <category term="命令行" scheme="http://yoursite.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
     
   </entry>
   
