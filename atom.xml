@@ -4,9 +4,9 @@
   <subtitle>Days are numbered</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://xiongmengting.com/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2016-10-03T03:22:14.000Z</updated>
-  <id>http://xiongmengting.com/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>Zoe</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>hive安装笔记</title>
-    <link href="http://xiongmengting.com/2016/09/18/hive%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/"/>
-    <id>http://xiongmengting.com/2016/09/18/hive安装笔记/</id>
+    <link href="http://yoursite.com/2016/09/18/hive%E5%AE%89%E8%A3%85%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/18/hive安装笔记/</id>
     <published>2016-09-18T12:33:35.000Z</published>
     <updated>2016-10-03T03:22:14.000Z</updated>
     
@@ -62,14 +62,14 @@
     </summary>
     
     
-      <category term="大数据" scheme="http://xiongmengting.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="http://yoursite.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
   <entry>
     <title>影响力</title>
-    <link href="http://xiongmengting.com/2016/04/26/%E5%BD%B1%E5%93%8D%E5%8A%9B/"/>
-    <id>http://xiongmengting.com/2016/04/26/影响力/</id>
+    <link href="http://yoursite.com/2016/04/26/%E5%BD%B1%E5%93%8D%E5%8A%9B/"/>
+    <id>http://yoursite.com/2016/04/26/影响力/</id>
     <published>2016-04-26T08:32:35.000Z</published>
     <updated>2016-04-26T08:38:43.000Z</updated>
     
@@ -89,16 +89,16 @@
     </summary>
     
     
-      <category term="生活" scheme="http://xiongmengting.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="读书笔记" scheme="http://xiongmengting.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>在Mac10.10.5下安装caffe以及运行mnist数据集</title>
-    <link href="http://xiongmengting.com/2016/03/18/%E5%9C%A8Mac10-10-5%E4%B8%8B%E5%AE%89%E8%A3%85caffe%E4%BB%A5%E5%8F%8A%E8%B7%91%E4%B8%80%E4%B8%8Bmnist%E6%95%B0%E6%8D%AE%E9%9B%86/"/>
-    <id>http://xiongmengting.com/2016/03/18/在Mac10-10-5下安装caffe以及跑一下mnist数据集/</id>
+    <link href="http://yoursite.com/2016/03/18/%E5%9C%A8Mac10-10-5%E4%B8%8B%E5%AE%89%E8%A3%85caffe%E4%BB%A5%E5%8F%8A%E8%B7%91%E4%B8%80%E4%B8%8Bmnist%E6%95%B0%E6%8D%AE%E9%9B%86/"/>
+    <id>http://yoursite.com/2016/03/18/在Mac10-10-5下安装caffe以及跑一下mnist数据集/</id>
     <published>2016-03-18T09:02:10.000Z</published>
     <updated>2016-03-18T09:40:49.000Z</updated>
     
@@ -137,16 +137,16 @@
     </summary>
     
     
-      <category term="caffe" scheme="http://xiongmengting.com/tags/caffe/"/>
+      <category term="caffe" scheme="http://yoursite.com/tags/caffe/"/>
     
-      <category term="深度学习" scheme="http://xiongmengting.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>关于微信接口网页授权的access token</title>
-    <link href="http://xiongmengting.com/2016/03/05/%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%8F%A3%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83%E7%9A%84accesstoken/"/>
-    <id>http://xiongmengting.com/2016/03/05/关于微信接口网页授权的accesstoken/</id>
+    <link href="http://yoursite.com/2016/03/05/%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%8F%A3%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83%E7%9A%84accesstoken/"/>
+    <id>http://yoursite.com/2016/03/05/关于微信接口网页授权的accesstoken/</id>
     <published>2016-03-05T05:54:42.000Z</published>
     <updated>2016-03-05T07:03:12.000Z</updated>
     
@@ -165,14 +165,14 @@
     </summary>
     
     
-      <category term="php" scheme="http://xiongmengting.com/tags/php/"/>
+      <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>sass基础</title>
-    <link href="http://xiongmengting.com/2016/02/29/sass%E5%9F%BA%E7%A1%80/"/>
-    <id>http://xiongmengting.com/2016/02/29/sass基础/</id>
+    <link href="http://yoursite.com/2016/02/29/sass%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2016/02/29/sass基础/</id>
     <published>2016-02-29T01:05:51.000Z</published>
     <updated>2016-02-29T02:33:40.000Z</updated>
     
@@ -231,14 +231,14 @@
     </summary>
     
     
-      <category term="css" scheme="http://xiongmengting.com/tags/css/"/>
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>解决height：auto无效的方法</title>
-    <link href="http://xiongmengting.com/2016/01/26/%E8%A7%A3%E5%86%B3height%EF%BC%9Aauto%E6%97%A0%E6%95%88%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://xiongmengting.com/2016/01/26/解决height：auto无效的方法/</id>
+    <link href="http://yoursite.com/2016/01/26/%E8%A7%A3%E5%86%B3height%EF%BC%9Aauto%E6%97%A0%E6%95%88%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2016/01/26/解决height：auto无效的方法/</id>
     <published>2016-01-26T03:41:34.000Z</published>
     <updated>2016-01-26T03:45:09.000Z</updated>
     
@@ -260,14 +260,14 @@
     </summary>
     
     
-      <category term="javascript" scheme="http://xiongmengting.com/tags/javascript/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>黑盒测试和白盒测试</title>
-    <link href="http://xiongmengting.com/2016/01/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E5%92%8C%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
-    <id>http://xiongmengting.com/2016/01/26/黑盒测试和白盒测试/</id>
+    <link href="http://yoursite.com/2016/01/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E5%92%8C%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2016/01/26/黑盒测试和白盒测试/</id>
     <published>2016-01-26T03:32:30.000Z</published>
     <updated>2016-01-26T03:39:24.000Z</updated>
     
@@ -304,14 +304,14 @@
     </summary>
     
     
-      <category term="软件测试" scheme="http://xiongmengting.com/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+      <category term="软件测试" scheme="http://yoursite.com/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>“正则式用变量值定义的方法（转）”</title>
-    <link href="http://xiongmengting.com/2016/01/26/%E2%80%9C%E6%AD%A3%E5%88%99%E5%BC%8F%E7%94%A8%E5%8F%98%E9%87%8F%E5%80%BC%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E8%BD%AC%EF%BC%89%E2%80%9D/"/>
-    <id>http://xiongmengting.com/2016/01/26/“正则式用变量值定义的方法（转）”/</id>
+    <link href="http://yoursite.com/2016/01/26/%E2%80%9C%E6%AD%A3%E5%88%99%E5%BC%8F%E7%94%A8%E5%8F%98%E9%87%8F%E5%80%BC%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E8%BD%AC%EF%BC%89%E2%80%9D/"/>
+    <id>http://yoursite.com/2016/01/26/“正则式用变量值定义的方法（转）”/</id>
     <published>2016-01-26T03:28:07.000Z</published>
     <updated>2016-01-26T03:29:50.000Z</updated>
     
@@ -327,14 +327,14 @@
     </summary>
     
     
-      <category term="javascript" scheme="http://xiongmengting.com/tags/javascript/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>破茧成蝶 用户体验设计师的成长之路读书心得</title>
-    <link href="http://xiongmengting.com/2016/01/17/%E7%A0%B4%E8%8C%A7%E6%88%90%E8%9D%B6-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF%E8%AF%BB%E4%B9%A6%E5%BF%83%E5%BE%97/"/>
-    <id>http://xiongmengting.com/2016/01/17/破茧成蝶-用户体验设计师的成长之路读书心得/</id>
+    <link href="http://yoursite.com/2016/01/17/%E7%A0%B4%E8%8C%A7%E6%88%90%E8%9D%B6-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF%E8%AF%BB%E4%B9%A6%E5%BF%83%E5%BE%97/"/>
+    <id>http://yoursite.com/2016/01/17/破茧成蝶-用户体验设计师的成长之路读书心得/</id>
     <published>2016-01-17T06:48:22.000Z</published>
     <updated>2016-01-17T11:12:58.000Z</updated>
     
@@ -362,16 +362,16 @@
     </summary>
     
     
-      <category term="读书笔记" scheme="http://xiongmengting.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="设计" scheme="http://xiongmengting.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+      <category term="设计" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>敏感的人如何应对外界压力</title>
-    <link href="http://xiongmengting.com/2016/01/16/%E6%95%8F%E6%84%9F%E7%9A%84%E4%BA%BA%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9%E5%A4%96%E7%95%8C%E5%8E%8B%E5%8A%9B/"/>
-    <id>http://xiongmengting.com/2016/01/16/敏感的人如何应对外界压力/</id>
+    <link href="http://yoursite.com/2016/01/16/%E6%95%8F%E6%84%9F%E7%9A%84%E4%BA%BA%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9%E5%A4%96%E7%95%8C%E5%8E%8B%E5%8A%9B/"/>
+    <id>http://yoursite.com/2016/01/16/敏感的人如何应对外界压力/</id>
     <published>2016-01-16T11:26:46.000Z</published>
     <updated>2016-01-26T03:43:16.000Z</updated>
     
@@ -416,16 +416,16 @@
     </summary>
     
     
-      <category term="生活" scheme="http://xiongmengting.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="读书笔记" scheme="http://xiongmengting.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>mac 命令行</title>
-    <link href="http://xiongmengting.com/2016/01/16/mac-%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    <id>http://xiongmengting.com/2016/01/16/mac-命令行/</id>
+    <link href="http://yoursite.com/2016/01/16/mac-%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <id>http://yoursite.com/2016/01/16/mac-命令行/</id>
     <published>2016-01-16T11:10:17.000Z</published>
     <updated>2016-01-16T11:23:58.000Z</updated>
     
@@ -442,16 +442,16 @@
     </summary>
     
     
-      <category term="操作系统" scheme="http://xiongmengting.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="命令行" scheme="http://yoursite.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
-      <category term="命令行" scheme="http://xiongmengting.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+      <category term="操作系统" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>操作mysql的命令行</title>
-    <link href="http://xiongmengting.com/2016/01/16/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    <id>http://xiongmengting.com/2016/01/16/mysql-命令行/</id>
+    <link href="http://yoursite.com/2016/01/16/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <id>http://yoursite.com/2016/01/16/mysql-命令行/</id>
     <published>2016-01-16T10:29:12.000Z</published>
     <updated>2016-01-16T11:09:40.000Z</updated>
     
@@ -465,16 +465,16 @@
     </summary>
     
     
-      <category term="命令行" scheme="http://xiongmengting.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
     
-      <category term="mysql" scheme="http://xiongmengting.com/tags/mysql/"/>
+      <category term="命令行" scheme="http://yoursite.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
   </entry>
   
   <entry>
     <title>OpenCv&amp;OpenGl</title>
-    <link href="http://xiongmengting.com/2016/01/11/opencv-opengl/"/>
-    <id>http://xiongmengting.com/2016/01/11/opencv-opengl/</id>
+    <link href="http://yoursite.com/2016/01/11/opencv-opengl/"/>
+    <id>http://yoursite.com/2016/01/11/opencv-opengl/</id>
     <published>2016-01-11T01:30:16.000Z</published>
     <updated>2016-01-11T14:20:58.000Z</updated>
     
@@ -491,18 +491,18 @@
     </summary>
     
     
-      <category term="图形" scheme="http://xiongmengting.com/tags/%E5%9B%BE%E5%BD%A2/"/>
+      <category term="图形" scheme="http://yoursite.com/tags/%E5%9B%BE%E5%BD%A2/"/>
     
-      <category term="图像" scheme="http://xiongmengting.com/tags/%E5%9B%BE%E5%83%8F/"/>
+      <category term="图像" scheme="http://yoursite.com/tags/%E5%9B%BE%E5%83%8F/"/>
     
-      <category term="计算机视觉" scheme="http://xiongmengting.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+      <category term="计算机视觉" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
   </entry>
   
   <entry>
     <title>canvas基础</title>
-    <link href="http://xiongmengting.com/2016/01/09/canvas%E5%9F%BA%E7%A1%80/"/>
-    <id>http://xiongmengting.com/2016/01/09/canvas基础/</id>
+    <link href="http://yoursite.com/2016/01/09/canvas%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2016/01/09/canvas基础/</id>
     <published>2016-01-09T15:14:16.000Z</published>
     <updated>2016-01-09T15:24:57.000Z</updated>
     
@@ -531,16 +531,16 @@
     </summary>
     
     
-      <category term="javascript" scheme="http://xiongmengting.com/tags/javascript/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="canvas" scheme="http://xiongmengting.com/tags/canvas/"/>
+      <category term="canvas" scheme="http://yoursite.com/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>你好，2016</title>
-    <link href="http://xiongmengting.com/2015/12/31/%E4%BD%A0%E5%A5%BD%EF%BC%8C2016/"/>
-    <id>http://xiongmengting.com/2015/12/31/你好，2016/</id>
+    <link href="http://yoursite.com/2015/12/31/%E4%BD%A0%E5%A5%BD%EF%BC%8C2016/"/>
+    <id>http://yoursite.com/2015/12/31/你好，2016/</id>
     <published>2015-12-31T15:07:34.000Z</published>
     <updated>2016-01-01T02:03:39.000Z</updated>
     
@@ -570,16 +570,16 @@
     </summary>
     
     
-      <category term="生活" scheme="http://xiongmengting.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="年度总结" scheme="http://xiongmengting.com/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+      <category term="年度总结" scheme="http://yoursite.com/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>从小红点说开</title>
-    <link href="http://xiongmengting.com/2015/12/28/%E4%BB%8E%E5%B0%8F%E7%BA%A2%E7%82%B9%E8%AF%B4%E5%BC%80/"/>
-    <id>http://xiongmengting.com/2015/12/28/从小红点说开/</id>
+    <link href="http://yoursite.com/2015/12/28/%E4%BB%8E%E5%B0%8F%E7%BA%A2%E7%82%B9%E8%AF%B4%E5%BC%80/"/>
+    <id>http://yoursite.com/2015/12/28/从小红点说开/</id>
     <published>2015-12-28T05:46:52.000Z</published>
     <updated>2015-12-28T06:25:13.000Z</updated>
     
@@ -609,16 +609,16 @@
     </summary>
     
     
-      <category term="javascript" scheme="http://xiongmengting.com/tags/javascript/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="websocket" scheme="http://xiongmengting.com/tags/websocket/"/>
+      <category term="websocket" scheme="http://yoursite.com/tags/websocket/"/>
     
   </entry>
   
   <entry>
     <title>类型识别</title>
-    <link href="http://xiongmengting.com/2015/12/18/%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB/"/>
-    <id>http://xiongmengting.com/2015/12/18/类型识别/</id>
+    <link href="http://yoursite.com/2015/12/18/%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB/"/>
+    <id>http://yoursite.com/2015/12/18/类型识别/</id>
     <published>2015-12-18T12:03:26.000Z</published>
     <updated>2015-12-28T13:57:54.000Z</updated>
     
@@ -660,14 +660,14 @@
     </summary>
     
     
-      <category term="javascript" scheme="http://xiongmengting.com/tags/javascript/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>前端学习的一些规划</title>
-    <link href="http://xiongmengting.com/2015/12/16/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E5%88%92/"/>
-    <id>http://xiongmengting.com/2015/12/16/前端学习的一些规划/</id>
+    <link href="http://yoursite.com/2015/12/16/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E5%88%92/"/>
+    <id>http://yoursite.com/2015/12/16/前端学习的一些规划/</id>
     <published>2015-12-16T12:35:59.000Z</published>
     <updated>2016-04-26T08:37:13.000Z</updated>
     
@@ -683,7 +683,7 @@
     </summary>
     
     
-      <category term="生活" scheme="http://xiongmengting.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
