@@ -16,31 +16,17 @@
     
     
 
-    <meta name="description" content="安装步骤
-在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile
-
-
-12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin
-之后编译环境变量1source">
+    <meta name="description" content="安装步骤 在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile   12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin 之后编译环境变量1source">
+<meta name="keywords" content="大数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hive安装笔记 | Zoe">
 <meta property="og:url" content="http://yoursite.com/2016/09/18/hive安装笔记/index.html">
 <meta property="og:site_name" content="Zoe">
-<meta property="og:description" content="安装步骤
-在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile
-
-
-12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin
-之后编译环境变量1source">
+<meta property="og:description" content="安装步骤 在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile   12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin 之后编译环境变量1source">
 <meta property="og:updated_time" content="2016-10-03T03:22:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hive安装笔记 | Zoe">
-<meta name="twitter:description" content="安装步骤
-在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile
-
-
-12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin
-之后编译环境变量1source">
+<meta name="twitter:description" content="安装步骤 在官网下载apache-hive-2.0.0-bin.tar.gz，采用直接解压缩的形式安装放置到相应目录后修改和配置环境变量1vi ~/.bash_profile   12export HIVE_HOME=&amp;#123;YOUR OWN PATH&amp;#125;apache-hive-2.0.0export PATH=$PATH:$HIVE_HOME/bin 之后编译环境变量1source">
     
     
       <link rel="alternate" href="/atom.xml" title="Zoe" type="application/atom+xml">
@@ -55,11 +41,6 @@
 
 </head>
 <body>
-    <a href="https://github.com/zoeonly"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
 
     
 
@@ -276,7 +257,7 @@ classes that you can use:
 <p>解决方法：先启动hive –service metastore &amp;<br>结果出现问题：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The specified datastore driver (<span class="string">"com.mysql.jdbc.Driver"</span>) was <span class="keyword">not</span> found <span class="keyword">in</span> <span class="keyword">the</span> CLASSPATH</div></pre></td></tr></table></figure></p>
 <p>解决方法：在电脑中找到mysql-connector-Java-x.x.x.jar文件复制到hive的lib目录下,再次尝试，发现：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Required table missing : <span class="string">""</span>VERSION<span class="string">""</span> <span class="keyword">in</span> Catalog <span class="string">""</span> Schema <span class="string">""</span>. DataNucleus requires this table <span class="keyword">to</span> perform <span class="keyword">its</span> persistence operations. Either your MetaData <span class="keyword">is</span> incorrect, <span class="keyword">or</span> you need <span class="keyword">to</span> enable <span class="string">"datanucleus.autoCreateTables"</span></div></pre></td></tr></table></figure></p>
 <p>解决方法：在hive-site.xml加上<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>datanucleus.autoCreateTables<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>True<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>发现搞定当前问题<br>接着输入hive,还是有问题：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.net.<span class="string">ConnectException:</span> Connection refused; For more details <span class="string">see:</span></div><div class="line"><span class="string">http:</span><span class="comment">//wiki.apache.org/hadoop/ConnectionRefused</span></div></pre></td></tr></table></figure></p>
+<p>发现搞定当前问题<br>接着输入hive,还是有问题：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">java.net.ConnectException:</span> Connection refused<span class="comment">; For more details see:</span></div><div class="line"><span class="symbol">http:</span>//wiki.apache<span class="meta">.org</span>/hadoop/ConnectionRefused</div></pre></td></tr></table></figure></p>
 <p>搞不定，试试通过<strong> hive –service cli </strong>命令启动，得到错误<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Exception <span class="keyword">in</span> thread <span class="string">"main"</span> java.lang.<span class="string">RuntimeException:</span> java.lang.<span class="string">IllegalArgumentException:</span> java.net.<span class="string">URISyntaxException:</span> Relative path <span class="keyword">in</span> absolute <span class="string">URI:</span> $&#123;<span class="string">system:</span>java.io.tmpdir%<span class="number">7</span>D/$%<span class="number">7</span><span class="string">Bsystem:</span>user.name%<span class="number">7</span>D</div></pre></td></tr></table></figure></p>
 <p>解决步骤：<br>1.查看hive-site.xml配置，会看到配置值含有”system:java.io.tmpdir”的配置项<br>2.新建文件夹{YOUR OWN PATH}/hive-0.14.0-bin/iotmp<br>3.在hive-site.xml配置里面改完下面三个配置项<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span>&gt;</div><div class="line">  &lt;<span class="built_in">name</span>&gt;hive.exec.<span class="keyword">local</span>.scratchdir&lt;/<span class="built_in">name</span>&gt;</div><div class="line">  &lt;value&gt;$HIVE_HOME/iotmp&lt;/value&gt;</div><div class="line">  &lt;description&gt;Local scratch <span class="literal">space</span> <span class="keyword">for</span> Hive jobs&lt;/description&gt;</div><div class="line">&lt;/<span class="keyword">property</span>&gt;</div><div class="line">&lt;<span class="keyword">property</span>&gt;</div><div class="line">  &lt;<span class="built_in">name</span>&gt;hive.querylog.location&lt;/<span class="built_in">name</span>&gt;</div><div class="line">  &lt;value&gt;$HIVE_HOME/iotmp&lt;/value&gt;</div><div class="line">  &lt;description&gt;Location <span class="keyword">of</span> Hive <span class="built_in">run</span> <span class="built_in">time</span> structured <span class="built_in">log</span> <span class="built_in">file</span>&lt;/description&gt;</div><div class="line">&lt;/<span class="keyword">property</span>&gt;</div><div class="line">&lt;<span class="keyword">property</span>&gt;</div><div class="line">  &lt;<span class="built_in">name</span>&gt;hive.downloaded.resources.dir&lt;/<span class="built_in">name</span>&gt;</div><div class="line">  &lt;value&gt;$HIVE_HOME/iotmp&lt;/value&gt;</div><div class="line">  &lt;description&gt;Temporary <span class="keyword">local</span> directory <span class="keyword">for</span> added resources <span class="keyword">in</span> <span class="keyword">the</span> remote <span class="built_in">file</span> system.&lt;/description&gt;</div><div class="line">&lt;/<span class="keyword">property</span>&gt;</div></pre></td></tr></table></figure></p>
 <p>就大功告成了，此时无论输入hive还是hive –service cli都可以妥妥的启动hive cli辣～<br><strong> 实际采用远程接口jdbc,odbc编程比较多，需要先开启远程接口服务：<br>hive -service hiveserver &amp; </strong></p>

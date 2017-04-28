@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /about/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+
+Sitemap: http://www.zoeonly.github.io/sitemap.xml
+Sitemap: http://www.zoeonly.github.io/baidusitemap.xml
