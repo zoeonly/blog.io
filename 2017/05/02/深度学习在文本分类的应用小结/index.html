@@ -25,7 +25,7 @@
 <meta property="og:description" content="最近一段时间在研究深度学习在文本分类中的应用，因此自己做一个总结，也是对近段时间的一个回顾。深度学习之前在图像和语音方面已经取得了非常好的效果，然而在文本方面的效果并不惊人，有一个说法我觉得解释的比较合理。  语言（词、句子、篇章等）属于人类认知过程中产生的高层认知抽象实体，而语音和图像属于较为底层的原始输入信号，所以后两者更适合做deep learning来学习特征。  而深度学习中经常用到的卷">
 <meta property="og:image" content="http://yoursite.com/img/cnn.png">
 <meta property="og:image" content="http://yoursite.com/img/result1.png">
-<meta property="og:updated_time" content="2017-05-02T07:41:14.000Z">
+<meta property="og:updated_time" content="2017-05-02T07:49:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习在文本分类的应用小结 | Zoe">
 <meta name="twitter:description" content="最近一段时间在研究深度学习在文本分类中的应用，因此自己做一个总结，也是对近段时间的一个回顾。深度学习之前在图像和语音方面已经取得了非常好的效果，然而在文本方面的效果并不惊人，有一个说法我觉得解释的比较合理。  语言（词、句子、篇章等）属于人类认知过程中产生的高层认知抽象实体，而语音和图像属于较为底层的原始输入信号，所以后两者更适合做deep learning来学习特征。  而深度学习中经常用到的卷">
@@ -245,8 +245,9 @@ classes that you can use:
 <li>随机初始化</li>
 <li>预训练的固定词向量（word2vec）</li>
 <li>可以改变的词向量</li>
-<li>前两种的综合（双通道）<br>实验结果如下图：<br><img src="/img/result1.png" alt="结果对比图" title="结果对比图"><br>那么输入就为一个n*d的方阵，卷积操作使用了三种filter，2,3,4,每种两个总共6个filter，得到的feature map进行最大池化（Max-pooling），得到一个feature vector，根据这个feature vector最后连上一个softmax做分类。<h3 id="参数调整"><a href="#参数调整" class="headerlink" title="参数调整"></a>参数调整</h3>这个过程并不是很复杂，有一句话说出了数据算法的精髓：</li>
+<li>前两种的综合（双通道）<br>实验结果如下图：<br><img src="/img/result1.png" alt="结果对比图" title="结果对比图"><br>那么输入就为一个n*d的方阵，卷积操作使用了三种filter，2,3,4,每种两个总共6个filter，得到的feature map进行最大池化（Max-pooling），得到一个feature vector，根据这个feature vector最后连上一个softmax做分类。</li>
 </ul>
+<h3 id="参数调整"><a href="#参数调整" class="headerlink" title="参数调整"></a>参数调整</h3><p>这个过程并不是很复杂，有一句话说出了数据算法的精髓：</p>
 <blockquote>
 <p>数据质量决定了算法效果的上界,算法模型的变换、算法参数的调优只不过是在努力逼近这个上界而已</p>
 </blockquote>
@@ -260,7 +261,7 @@ classes that you can use:
 <li>regularization terms (dropout/l2):<br>dropout：0.3-0.7之间，通常0.5</li>
 </ul>
 <p>虽然说CNN在短文本，sentence分类的研究比较多，但是在长文本分类上它的效果也是很好的。例如我自己在20-Newsgroup的数据集上所作的实验，相比传统机器学习中最好的SVM84.5%的准确率，CNN能够达到88%以上（随机初始化的词向量）。</p>
-<p>##RNN<br>未完待续</p>
+<h2 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h2><p>未完待续</p>
 <p>具体实现的代码见<a href="https://github.com/zoeonly/cnn_multi_text_classify" target="_blank" rel="external">这里</a></p>
 
   </section>
