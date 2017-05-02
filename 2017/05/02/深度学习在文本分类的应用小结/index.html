@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      深度学习在文本分类的应用小结 | Zoe 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Zoe">
+    
+    
+
+    <meta name="description" content="最近一段时间在研究深度学习在文本分类中的应用，因此自己做一个总结，也是对近段时间的一个回顾。深度学习之前在图像和语音方面已经取得了非常好的效果，然而在文本方面的效果并不惊人，有一个说法我觉得解释的比较合理。  语言（词、句子、篇章等）属于人类认知过程中产生的高层认知抽象实体，而语音和图像属于较为底层的原始输入信号，所以后两者更适合做deep learning来学习特征。  而深度学习中经常用到的卷">
+<meta name="keywords" content="深度学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习在文本分类的应用小结 | Zoe">
+<meta property="og:url" content="http://yoursite.com/2017/05/02/深度学习在文本分类的应用小结/index.html">
+<meta property="og:site_name" content="Zoe">
+<meta property="og:description" content="最近一段时间在研究深度学习在文本分类中的应用，因此自己做一个总结，也是对近段时间的一个回顾。深度学习之前在图像和语音方面已经取得了非常好的效果，然而在文本方面的效果并不惊人，有一个说法我觉得解释的比较合理。  语言（词、句子、篇章等）属于人类认知过程中产生的高层认知抽象实体，而语音和图像属于较为底层的原始输入信号，所以后两者更适合做deep learning来学习特征。  而深度学习中经常用到的卷">
+<meta property="og:image" content="http://yoursite.com/img/cnn.png">
+<meta property="og:image" content="http://yoursite.com/img/result1.png">
+<meta property="og:updated_time" content="2017-05-02T07:41:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="深度学习在文本分类的应用小结 | Zoe">
+<meta name="twitter:description" content="最近一段时间在研究深度学习在文本分类中的应用，因此自己做一个总结，也是对近段时间的一个回顾。深度学习之前在图像和语音方面已经取得了非常好的效果，然而在文本方面的效果并不惊人，有一个说法我觉得解释的比较合理。  语言（词、句子、篇章等）属于人类认知过程中产生的高层认知抽象实体，而语音和图像属于较为底层的原始输入信号，所以后两者更适合做deep learning来学习特征。  而深度学习中经常用到的卷">
+<meta name="twitter:image" content="http://yoursite.com/img/cnn.png">
+    
+    
+      <link rel="alternate" href="/atom.xml" title="Zoe" type="application/atom+xml">
+    
+    
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+<meta name="baidu-site-verification" content="H3swprvhPV" />
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Zoe</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Days are numbered
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <!-- <li class="navigation__item">
+        <a href="https://github.com/zoeonly" title="GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+      -->
+      <li class="navigation__item">
+        <a href="https://www.facebook.com/profile.php?id=100005454166638" title="Facebook">
+          <i class='icon icon-social-facebook'></i>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="https://mail.qq.com/" title="Mail:716202820@qq.com">
+          <i class='icon icon-mail'></i>
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="https://www.zhihu.com/people/qiong-yu-zhen" title="ZhiHu">
+          <i class='icon icon-social-500px'></i>
+        </a>
+      </li>
+    
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?628c5d7a30d9c1241e6d994a3160dd05";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74730232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h2 class="post-title">深度学习在文本分类的应用小结</h2>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-05-02" class="post-meta__date date">2017-05-02</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/深度学习/">深度学习</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>最近一段时间在研究深度学习在文本分类中的应用，因此自己做一个总结，也是对近段时间的一个回顾。<br>深度学习之前在图像和语音方面已经取得了非常好的效果，然而在文本方面的效果并不惊人，有一个说法我觉得解释的比较合理。</p>
+<blockquote>
+<p>语言（词、句子、篇章等）属于人类认知过程中产生的高层认知抽象实体，<br>而语音和图像属于较为底层的原始输入信号，所以后两者更适合做deep learning来学习特征。</p>
+</blockquote>
+<p>而深度学习中经常用到的卷积神经网络，也就是一种提取local feature的利器，feature的local性在自然信号中（语音和图像）表现的非常明显。</p>
+<h2 id="CNN与RNN"><a href="#CNN与RNN" class="headerlink" title="CNN与RNN"></a>CNN与RNN</h2><p>本文所讨论的RNN(Recurrent Neural Network)主要是指LSTM – Long Short Term Memory。LSTM是RNN中用于文本分类比较火的方法，但是RNN更多时候是用在语言句法建模上的，擅长建模文本序列。<br>CNN在长文本分类上表现要比RNN好，但是在短文本方面，RNN更加侧重词与词之间的联系，因此可能会比CNN要好，但是还是需要具体应用场景的实验。目前的很多研究也是聚焦于sentence classify，因为句子的信息量比较少，在话题分类和情感分类的应用场景中采用传统的机器学习分类方法效果并不是很好。<br>下面就具体来讲一讲自己看的论文和做的部分实验。</p>
+<h2 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h2><h3 id="CNN的原理"><a href="#CNN的原理" class="headerlink" title="CNN的原理"></a>CNN的原理</h3><p>首先讲一下CNN的原理，主要如下图所示：<br><img src="/img/cnn.png" alt="CNN结构图" title="CNN结构图"><br>上图的输入为一段长度为n的文字，例如I like this movie very much !, 这里n为7，实际上一般的做法是取最长的文本为n, 然后不够的句子padding到n，然后对应一个word的向量长度为d。在针对长文本分类训练时也可以采用对文本进行切割的方式，例如将一篇1000词的文本分为两个500的“sentence”进行训练。<br>这里每个word对应的向量初始化有两种方式，一种是随机初始化，一种是用预训练的词向量进行初始化，最出名的是Google的word2vec,此外还有GloVe（2014），听说后者是比前者还要厉害的存在（但根据后面的调参的论文实验中貌似并没有比前者厉害）。实验证明在<a href="http://qwone.com/~jason/20Newsgroups/" target="_blank" rel="external">20-Newsgroup的数据集</a>上，即使使用随机初始化的词向量，效果也比传统机器学习中最好的svm好，而采用word2vec则会在随机初始化的上面再提高，还有在训练中不固定词向量进行调整的方法，Kim的论文(Convolutional Neural Networks for Sentence Classification)中主要说明了四种方法的对比：</p>
+<ul>
+<li>随机初始化</li>
+<li>预训练的固定词向量（word2vec）</li>
+<li>可以改变的词向量</li>
+<li>前两种的综合（双通道）<br>实验结果如下图：<br><img src="/img/result1.png" alt="结果对比图" title="结果对比图"><br>那么输入就为一个n*d的方阵，卷积操作使用了三种filter，2,3,4,每种两个总共6个filter，得到的feature map进行最大池化（Max-pooling），得到一个feature vector，根据这个feature vector最后连上一个softmax做分类。<h3 id="参数调整"><a href="#参数调整" class="headerlink" title="参数调整"></a>参数调整</h3>这个过程并不是很复杂，有一句话说出了数据算法的精髓：</li>
+</ul>
+<blockquote>
+<p>数据质量决定了算法效果的上界,算法模型的变换、算法参数的调优只不过是在努力逼近这个上界而已</p>
+</blockquote>
+<p>因此在数据集确定的情况下，模型的变换，参数的调整是一个逃不开的话题，zhang的文章A Sensitivity Analysis of (and Practitioners’ Guide to) Convolutional Neural Networks for Sentence Classification就纯粹的就sentence classify的参数做了一系列实验并给出了自己的建议，个人觉得，看实验几张图的拐点和趋势就能得到启发，哪些参数到达一定的值，再增大对准确率的影响很小但对性能的影响大是需要权衡的关键点。以及对不同数据集如何寻找合适的filter size是有帮助的。<br>这里做一些简单归纳：</p>
+<ul>
+<li>input word vector representations:<br>这里主要讨论的是用word2vec和GloVe,以及两者结合，实际的结果表明三种方法中第一种比较好<br>文中也提到了用其他的向量进行文本表达，例如Johnson和zhang的Effective Use of Word Order for Text + Categorization with Convolutional Neural Networks一文中的one-hot vector的方法，简单的one－hot是词袋的一个变形，单词的个数是限定的，然后提到效果其实并不好，解释说是Johnson和zhang的文章主要是用于text分类，而对于sentence和短文本可能word embedding效果比较好。</li>
+<li>filter region size(s):<br>文中讨论了不同数据集的最佳filter size是很不一样的，与数据集自身的特点有关，一个实践性的方法是先用单一size实验，得到最佳的size后列举附近的size，目前实验一般用的3，4，5，部分数据集存在3，3，3这样效果更佳的情况，但是个人觉得差别没有那么大。</li>
+<li>the number of feature maps:<br>100－600之间即可，稍大会有提升，但不多。</li>
+<li>the activation function(s):<br>事实证明用ReLU和tanh试一下就行了</li>
+<li>the pooling strategy:<br>最大池化最好，能捕捉最大的信息</li>
+<li>regularization terms (dropout/l2):<br>dropout：0.3-0.7之间，通常0.5</li>
+</ul>
+<p>虽然说CNN在短文本，sentence分类的研究比较多，但是在长文本分类上它的效果也是很好的。例如我自己在20-Newsgroup的数据集上所作的实验，相比传统机器学习中最好的SVM84.5%的准确率，CNN能够达到88%以上（随机初始化的词向量）。</p>
+<p>##RNN<br>未完待续</p>
+<p>具体实现的代码见<a href="https://github.com/zoeonly/cnn_multi_text_classify" target="_blank" rel="external">这里</a></p>
+
+  </section>
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-深度学习在文本分类的应用小结" data-title="深度学习在文本分类的应用小结" data-url="http://yoursite.com/2017/05/02/深度学习在文本分类的应用小结/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xiongmengting"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

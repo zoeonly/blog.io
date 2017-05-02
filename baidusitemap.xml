@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/05/02/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9C%A8%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E7%9A%84%E5%BA%94%E7%94%A8%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2017-05-02T07:41:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>深度学习在文本分类的应用小结</title>
+        <pubTime>2017-05-02T02:16:37.000Z</pubTime>
+        
+        <tag>深度学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/05/%E7%89%A7%E7%BE%8A%E5%B0%91%E5%B9%B4%E5%86%B3%E5%AE%9A%E5%8E%BB%E6%AD%BB/</loc>
     <lastmod>2017-03-05T09:59:25.000Z</lastmod>
     <data>
@@ -129,23 +146,6 @@
     
     
   <url>
-    <loc>http://yoursite.com/2016/01/26/%E8%A7%A3%E5%86%B3height%EF%BC%9Aauto%E6%97%A0%E6%95%88%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2016-01-26T03:45:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>解决height：auto无效的方法</title>
-        <pubTime>2016-01-26T03:41:34.000Z</pubTime>
-        
-        <tag>javascript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/01/16/%E6%95%8F%E6%84%9F%E7%9A%84%E4%BA%BA%E5%A6%82%E4%BD%95%E5%BA%94%E5%AF%B9%E5%A4%96%E7%95%8C%E5%8E%8B%E5%8A%9B/</loc>
     <lastmod>2016-01-26T03:43:16.000Z</lastmod>
     <data>
@@ -218,49 +218,11 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/01/16/mac-%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
-    <lastmod>2016-01-16T11:23:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac 命令行</title>
-        <pubTime>2016-01-16T11:10:17.000Z</pubTime>
-        
-        <tag>操作系统</tag>
-         
-        <tag>命令行</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/01/16/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
-    <lastmod>2016-01-16T11:09:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>操作mysql的命令行</title>
-        <pubTime>2016-01-16T10:29:12.000Z</pubTime>
-        
-        <tag>命令行</tag>
-         
-        <tag>mysql</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/01/11/opencv-opengl/</loc>
     <lastmod>2016-01-11T14:20:58.000Z</lastmod>
     <data>
         <display>
-        <title>OpenCv,OpenGl</title>
+        <title>OpenCv&OpenGl</title>
         <pubTime>2016-01-11T01:30:16.000Z</pubTime>
         
         <tag>图形</tag>
